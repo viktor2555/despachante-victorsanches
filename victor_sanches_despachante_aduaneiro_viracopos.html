@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Despachante Aduaneiro Autônomo em Viracopos (VCP) - Victor Luis Sanches. Desembaraço aduaneiro, liberação e retirada de cargas no aeroporto de Campinas/SP.">
+    <title>Victor Luis Sanches | Despachante Aduaneiro em Viracopos (VCP)</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-navy: #0F172A;
+            --accent-blue: #0284C7;
+            --light-blue: #E0F2FE;
+            --whatsapp-green: #22C55E;
+            --whatsapp-hover: #16A34A;
+            --email-blue: #0284C7;
+            --email-hover: #0369A1;
+            --text-dark: #1E293B;
+            --text-muted: #475569;
+            --bg-card: rgba(255, 255, 255, 0.92);
+            --border-color: #CBD5E1;
+            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: url('tema-3.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Classes Reutilizáveis de Fade-in / Fade-out Elegantes */
+        .fade-in {
+            animation: fadeInEffect 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .fade-out {
+            animation: fadeOutEffect 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeInEffect {
+            0% {
+                opacity: 0;
+                transform: translateY(15px);
+                filter: blur(4px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0);
+            }
+        }
+
+        @keyframes fadeOutEffect {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-15px);
+                filter: blur(4px);
+            }
+        }
+
+        /* Efeito de Clarear e Escurecer Harmonioso */
+        .glow-hover {
+            transition: var(--transition-smooth);
+        }
+        .glow-hover:hover {
+            filter: brightness(1.25) contrast(1.05);
+        }
+
+        .dim-hover {
+            transition: var(--transition-smooth);
+        }
+        .dim-hover:hover {
+            filter: brightness(0.85);
+        }
+
+        header {
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+
+        .logo {
+            color: #FFFFFF;
+            font-size: 1.25rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+        }
+
+        .logo:hover {
+            filter: brightness(1.3);
+            transform: scale(1.02);
+        }
+
+        .logo span {
+            color: var(--accent-blue);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #CBD5E1;
+            text-decoration: none;
+            font-weight: 500;
+            opacity: 0.85;
+            transition: var(--transition-smooth);
+            position: relative;
+            padding: 0.2rem 0;
+        }
+
+        /* Efeito de Clarear / Destaque de Texto */
+        .nav-links a:hover {
+            color: #FFFFFF;
+            opacity: 1;
+            filter: brightness(1.4);
+            text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-blue);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        /* Pulso de Fundo Suave */
+        @keyframes pulseCard {
+            0%, 100% {
+                transform: translateY(0);
+                box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+            }
+            50% {
+                transform: translateY(-4px);
+                box-shadow: 0 12px 24px rgba(2, 132, 199, 0.15);
+            }
+        }
+
+        /* Hero Section com Vídeo de Fundo */
+        .hero-section {
+            position: relative;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%);
+            color: #FFFFFF;
+            padding: 6rem 1.5rem;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            opacity: 0.25;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.65);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(2, 132, 199, 0.3);
+            color: #38BDF8;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            backdrop-filter: blur(4px);
+            transition: var(--transition-smooth);
+        }
+
+        .hero-badge:hover {
+            filter: brightness(1.3);
+            transform: scale(1.03);
+            background-color: rgba(2, 132, 199, 0.5);
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.25rem;
+            transition: var(--transition-smooth);
+        }
+
+        .hero-title:hover {
+            filter: brightness(1.2);
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: #E2E8F0;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            transition: var(--transition-smooth);
+        }
+
+        .hero-subtitle:hover {
+            color: #FFFFFF;
+            filter: brightness(1.15);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.875rem 1.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition-smooth);
+            font-size: 1rem;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp-green);
+            color: #FFFFFF;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--whatsapp-hover);
+            transform: translateY(-2px);
+            filter: brightness(1.15);
+            box-shadow: 0 8px 20px rgba(34, 197, 94, 0.35);
+        }
+
+        .btn-email {
+            background-color: var(--email-blue);
+            color: #FFFFFF;
+        }
+
+        .btn-email:hover {
+            background-color: var(--email-hover);
+            transform: translateY(-2px);
+            filter: brightness(1.15);
+            box-shadow: 0 8px 20px rgba(2, 132, 199, 0.35);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(4px);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            filter: brightness(1.2);
+        }
+
+        /* Advantage Section */
+        .advantage-section {
+            background-color: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            transition: var(--transition-smooth);
+        }
+
+        .advantage-section:hover {
+            border-color: var(--accent-blue);
+            box-shadow: 0 12px 30px rgba(2, 132, 199, 0.12);
+        }
+
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .advantage-badge-box {
+            background: linear-gradient(135deg, rgba(224, 242, 254, 0.9) 0%, rgba(186, 230, 253, 0.9) 100%);
+            padding: 2.5rem;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid #7DD3FC;
+            animation: pulseCard 4s infinite ease-in-out;
+            transition: var(--transition-smooth);
+        }
+
+        .advantage-badge-box:hover {
+            transform: translateY(-6px) scale(1.02);
+            border-color: var(--accent-blue);
+            filter: brightness(1.08);
+            box-shadow: 0 15px 30px rgba(2, 132, 199, 0.2);
+        }
+
+        .advantage-badge-box i {
+            font-size: 3.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+            transition: var(--transition-smooth);
+        }
+
+        .advantage-badge-box:hover i {
+            transform: scale(1.15) rotate(5deg);
+            filter: brightness(1.2);
+        }
+
+        .advantage-badge-box h3 {
+            font-size: 1.25rem;
+            color: var(--primary-navy);
+            font-weight: 700;
+        }
+
+        .advantage-text h2 {
+            font-size: 2rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+            transition: var(--transition-smooth);
+        }
+
+        .advantage-text h2:hover {
+            color: var(--accent-blue);
+            filter: brightness(1.1);
+        }
+
+        .advantage-text p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Section Headers com Animação e Hover */
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 1.5rem;
+            border-radius: 12px;
+            backdrop-filter: blur(6px);
+            border: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
+        }
+
+        .section-header:hover {
+            background: rgba(255, 255, 255, 0.98);
+            border-color: var(--accent-blue);
+            box-shadow: 0 8px 25px rgba(2, 132, 199, 0.12);
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+            transition: var(--transition-smooth);
+        }
+
+        .section-header:hover h2 {
+            filter: brightness(1.2);
+            color: var(--accent-blue);
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+        }
+
+        /* About Section */
+        .about-card {
+            background-color: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+            backdrop-filter: blur(10px);
+            transition: var(--transition-smooth);
+        }
+
+        .about-card:hover {
+            border-color: var(--accent-blue);
+            box-shadow: 0 10px 30px rgba(2, 132, 199, 0.12);
+        }
+
+        .about-profile {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+        }
+
+        .profile-avatar-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-blue);
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+            transition: var(--transition-smooth);
+        }
+
+        .profile-avatar-img:hover {
+            transform: scale(1.08) rotate(-3deg);
+            filter: brightness(1.15);
+            border-color: #38BDF8;
+        }
+
+        .profile-info h3 {
+            font-size: 1.35rem;
+            color: var(--primary-navy);
+            transition: var(--transition-smooth);
+        }
+
+        .profile-info h3:hover {
+            color: var(--accent-blue);
+        }
+
+        .profile-info p {
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+
+        .profile-actions {
+            margin-top: 0.5rem;
+        }
+
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .activity-item {
+            background-color: rgba(248, 250, 252, 0.95);
+            padding: 1.25rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-blue);
+            animation: pulseCard 4s infinite ease-in-out;
+            transition: var(--transition-smooth);
+        }
+
+        .activity-item:nth-child(1) { animation-delay: 0s; }
+        .activity-item:nth-child(2) { animation-delay: 1.3s; }
+        .activity-item:nth-child(3) { animation-delay: 2.6s; }
+
+        .activity-item:hover {
+            transform: translateY(-6px);
+            background-color: #FFFFFF;
+            filter: brightness(1.05);
+            box-shadow: 0 10px 20px -5px rgba(2, 132, 199, 0.2);
+            border-left-color: #38BDF8;
+        }
+
+        .activity-item h4 {
+            font-size: 1rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition-smooth);
+        }
+
+        .activity-item:hover h4 {
+            color: var(--accent-blue);
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            animation: pulseCard 4s infinite ease-in-out;
+            transition: var(--transition-smooth);
+            backdrop-filter: blur(10px);
+        }
+
+        .service-card:nth-child(1) { animation-delay: 0.5s; }
+        .service-card:nth-child(2) { animation-delay: 1.8s; }
+        .service-card:nth-child(3) { animation-delay: 3.1s; }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 28px -6px rgba(2, 132, 199, 0.2);
+            border-color: var(--accent-blue);
+            background-color: #FFFFFF;
+            filter: brightness(1.03);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--light-blue);
+            color: var(--accent-blue);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+            transition: var(--transition-smooth);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.15) rotate(6deg);
+            background-color: var(--accent-blue);
+            color: #FFFFFF;
+        }
+
+        .service-title {
+            font-size: 1.25rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.75rem;
+            transition: var(--transition-smooth);
+        }
+
+        .service-card:hover .service-title {
+            color: var(--accent-blue);
+        }
+
+        .service-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Guia Viracopos */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .guide-card {
+            background-color: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            animation: pulseCard 4s infinite ease-in-out;
+            transition: var(--transition-smooth);
+            backdrop-filter: blur(10px);
+        }
+
+        .guide-card:nth-child(1) { animation-delay: 0s; }
+        .guide-card:nth-child(2) { animation-delay: 1.3s; }
+        .guide-card:nth-child(3) { animation-delay: 2.6s; }
+
+        .guide-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 28px -6px rgba(2, 132, 199, 0.2);
+            border-color: var(--accent-blue);
+            filter: brightness(1.03);
+            background-color: #FFFFFF;
+        }
+
+        .guide-card h3 {
+            font-size: 1.15rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: var(--transition-smooth);
+        }
+
+        .guide-card:hover h3 {
+            color: var(--accent-blue);
+        }
+
+        .guide-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* FAQ Section */
+        .faq-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            background-color: var(--bg-card);
+            overflow: hidden;
+            animation: pulseCard 5s infinite ease-in-out;
+            transition: var(--transition-smooth);
+            backdrop-filter: blur(10px);
+        }
+
+        .faq-item:nth-child(1) { animation-delay: 0.2s; }
+        .faq-item:nth-child(2) { animation-delay: 1.7s; }
+        .faq-item:nth-child(3) { animation-delay: 3.2s; }
+
+        .faq-item:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 8px 20px -4px rgba(2, 132, 199, 0.18);
+            filter: brightness(1.02);
+        }
+
+        .faq-question {
+            padding: 1.25rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition-smooth);
+        }
+
+        .faq-item:hover .faq-question {
+            color: var(--accent-blue);
+        }
+
+        .faq-answer {
+            padding: 0 1.25rem 1.25rem 1.25rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            position: relative;
+            background-color: var(--primary-navy);
+            color: #FFFFFF;
+            padding: 5rem 1.5rem 2.5rem 1.5rem;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .footer-video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            opacity: 0.45;
+            filter: contrast(1.1) brightness(0.9);
+        }
+
+        .footer-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.65) 0%, rgba(15, 23, 42, 0.75) 50%, rgba(15, 23, 42, 0.88) 100%);
+            z-index: 2;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 3;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-cta {
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+            background: rgba(15, 23, 42, 0.4);
+            padding: 2.5rem 1.5rem;
+            border-radius: 16px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: var(--transition-smooth);
+        }
+
+        .footer-cta:hover {
+            background: rgba(15, 23, 42, 0.6);
+            border-color: rgba(56, 189, 248, 0.4);
+            filter: brightness(1.1);
+        }
+
+        .footer-cta h2 {
+            font-size: 1.85rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            transition: var(--transition-smooth);
+        }
+
+        .footer-cta:hover h2 {
+            filter: brightness(1.25);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: #94A3B8;
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-links a:hover {
+            color: #FFFFFF;
+            filter: brightness(1.4);
+            transform: scale(1.2);
+        }
+
+        .copyright {
+            color: #94A3B8;
+            font-size: 0.875rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 2rem;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--whatsapp-green);
+            color: #FFFFFF;
+            padding: 0.75rem 1.25rem;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            z-index: 9999;
+            transition: var(--transition-smooth);
+        }
+
+        .floating-whatsapp:hover {
+            background-color: var(--whatsapp-hover);
+            transform: scale(1.06);
+            filter: brightness(1.15);
+            box-shadow: 0 12px 30px rgba(34, 197, 94, 0.6);
+        }
+
+        .floating-whatsapp i {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 1.85rem;
+            }
+            .advantage-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none;
+            }
+            .floating-whatsapp span {
+                display: none;
+            }
+            .floating-whatsapp {
+                padding: 1rem;
+                border-radius: 50%;
+            }
+            footer {
+                padding: 4rem 1rem 2rem 1rem;
+            }
+            .footer-cta h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="fade-in">
+        <div class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-plane-arrival"></i> Victor Sanches <span>| Despachante</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#sobre" class="glow-hover">Sobre Mim</a></li>
+                <li><a href="#servicos" class="glow-hover">Serviços</a></li>
+                <li><a href="#guia-viracopos" class="glow-hover">Guia Viracopos</a></li>
+                <li><a href="#faq" class="glow-hover">FAQ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section fade-in">
+        <video class="hero-video-bg" autoplay loop muted playsinline>
+            <source src="aviao-26.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fa-solid fa-location-dot"></i> Atuação Presencial no TECA Viracopos (VCP)
+            </div>
+            <h1 class="hero-title">Desembaraço Aduaneiro Agilizado e Presencial no Aeroporto de Viracopos</h1>
+            <p class="hero-subtitle">Despachante aduaneiro habilitado operando diretamente na ponta. Resolução rápida para liberação e retirada de mercadorias com documentação pronta.</p>
+            <div class="btn-group">
+                <a href="https://wa.me/5519974090051?text=Ol%C3%A1%20Victor,%20preciso%20de%20solicitar%20uma%20retirada%20urgente%20de%20carga%20em%20Viracopos." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Solicitar Retirada Urgente via WhatsApp
+                </a>
+                <a href="mailto:mavisatransportes@gmail.com?subject=Solicita%C3%A7%C3%A3o%20de%20Atendimento%20-%20Viracopos&body=Ol%C3%A1%20Victor,%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20desembara%C3%A7o/retirada%20de%20carga%20em%20Viracopos." class="btn btn-email">
+                    <i class="fa-solid fa-envelope"></i> Enviar E-mail de Contato
+                </a>
+                <a href="#servicos" class="btn btn-secondary">
+                    Conhecer Serviços & Atuação
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destaque Operacional -->
+    <section class="advantage-section container fade-in">
+        <div class="advantage-grid">
+            <div class="advantage-badge-box">
+                <i class="fa-solid fa-plane-circle-check"></i>
+                <h3 class="glow-hover">Presença Física em Viracopos (VCP)</h3>
+                <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem;">Credenciamento Siscomex no Recinto Alfandegado</p>
+            </div>
+            <div class="advantage-text">
+                <h2>Atendimento Autônomo, Direto e Sem Burocracia</h2>
+                <p>"Diferente de grandes agências com processos engessados, atuo de forma autônoma e credenciada diretamente no Terminal de Cargas (TECA) de Viracopos. Se a sua documentação já está pronta (DI, DUIMP, DTA, TCON ou Termos), assumo a operacionalização imediata para retirar sua carga no menor tempo possível."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre o Profissional -->
+    <section class="about-section container fade-in" id="sobre">
+        <div class="section-header">
+            <h2>Sobre Mim</h2>
+            <p>Experiência prática e atuação presencial para agilizar seus processos aduaneiros</p>
+        </div>
+        <div class="about-card">
+            <div class="about-profile">
+                <!-- Foto de Perfil -->
+                <img src="victor-01.jpg" alt="Victor Luis Sanches" class="profile-avatar-img">
+                <div class="profile-info">
+                    <h3>Victor Luis Sanches</h3>
+                    <p>Despachante Aduaneiro Autônomo (Habilitado no Siscomex)</p>
+                    <span style="font-size: 0.9rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">
+                        <i class="fa-solid fa-briefcase"></i> Experiência presencial no Terminal de Cargas do Aeroporto de Viracopos
+                    </span>
+                    <div class="profile-actions">
+                        <a href="mailto:mavisatransportes@gmail.com?subject=Contato%20via%20Site%20-%20Victor%20Sanches" class="btn btn-email" style="padding: 0.4rem 0.9rem; font-size: 0.85rem; margin-top: 0.5rem;">
+                            <i class="fa-solid fa-envelope"></i> Entrar em Contato por E-mail
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h4 style="color: var(--primary-navy); margin-bottom: 1rem;" class="glow-hover">Principais Atividades Exercidas:</h4>
+            <div class="activities-grid">
+                <div class="activity-item">
+                    <h4><i class="fa-solid fa-magnifying-glass"></i> Acompanhamento de Processos</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Tratamento de divergência de peso/volume, conferência física de mercadorias, protocolo de processos e verificação de pendências processuais.</p>
+                </div>
+                <div class="activity-item">
+                    <h4><i class="fa-solid fa-file-invoice"></i> Declaração de Importação (DI/DSI)</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Solicitação de puxe de mercadoria (montagem de processo) até a liberação formal e entrega à cia aérea ou destinatário final.</p>
+                </div>
+                <div class="activity-item">
+                    <h4><i class="fa-solid fa-suitcase"></i> Bagagem Desacompanhada</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Habilitação, checklist documental rigoroso e acompanhamento completo até a efetiva liberação na alfândega.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços & Portfólio -->
+    <section class="services-section container fade-in" id="servicos">
+        <div class="section-header">
+            <h2>Serviços & Portfólio de Atuação</h2>
+            <p>Soluções sob medida para importadores, exportadores e agentes de carga</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                <h3 class="service-title">Retirada e Liberação de Cargas Urgentes</h3>
+                <p class="service-desc">Acompanhamento e operacionalização presencial para cargas com DI/DUIMP desembaraçadas que necessitam de conferência ou emissão de comprovantes de entrega no recinto alfandegado.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-user-shield"></i></div>
+                <h3 class="service-title">Suporte a Importadores & Exportadores</h3>
+                <p class="service-desc">Atendimento sob demanda para pessoas físicas e jurídicas que precisam de um despachante habilitado para instruir ou protocolar processos junto à Receita Federal e órgãos anuentes em Viracopos.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-handshake"></i></div>
+                <h3 class="service-title">Parcerias com Comissárias e Tradings</h3>
+                <p class="service-desc">Braço operacional em Viracopos para agentes de carga e tradings de outras regiões que necessitam de apoio presencial qualificado no aeroporto de Campinas/SP.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guia Viracopos -->
+    <section class="guide-section container fade-in" id="guia-viracopos">
+        <div class="section-header">
+            <h2>Guia Prático & Resolução de Exigências em Viracopos</h2>
+            <p>Entenda o fluxo de retirada e como destravar sua mercadoria no recinto alfandegado</p>
+        </div>
+        <div class="guide-grid">
+            <div class="guide-card">
+                <h3><i class="fa-solid fa-circle-exclamation" style="color: #EAB308;"></i> Exigências de Órgãos Anuentes</h3>
+                <p>Retenções por Anvisa, Vigiagro ou Receita Federal exigem acompanhamento físico e conferência de lote/etiqueta no recinto para rápida instrução do processo.</p>
+            </div>
+            <div class="guide-card">
+                <h3><i class="fa-solid fa-scale-balanced" style="color: var(--accent-blue);"></i> Divergência de Peso ou Volume</h3>
+                <p>Divergências apuradas na recepção do TECA exigem verificação presencial e protocolo de retificação para evitar paralisação do desembaraço.</p>
+            </div>
+            <div class="guide-card">
+                <h3><i class="fa-solid fa-boxes-packing" style="color: var(--whatsapp-green);"></i> Puxe e Liberação Formal</h3>
+                <p>Com a documentação pronta (DI/DSI), organizamos o agendamento e a montagem do processo para liberação formal junto à concessionária e companhias aéreas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section container fade-in" id="faq">
+        <div class="section-header">
+            <h2>Perguntas Frequentes & Garantias</h2>
+            <p>Transparência, legalidade e agilidade para o seu processo aduaneiro</p>
+        </div>
+        <div class="faq-accordion">
+            <div class="faq-item">
+                <div class="faq-question">
+                    Posso contratar despachante autônomo diretamente?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <strong>Sim, com total respaldo legal.</strong> A legislação aduaneira brasileira (Decreto nº 6.759/2009 - Regulamento Aduaneiro) permite e valida expressamente a atuação direta do Despachante Aduaneiro Pessoa Física devidamente credenciado no Siscomex. Você contrata a agilidade e o conhecimento de um profissional habilitado diretamente no aeroporto, sem a sobretaxa e a lentidão de intermediários.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Quais são as vantagens do atendimento autônomo e presencial?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Você obtém <strong>Comunicação Direta</strong> (fala diretamente com quem está no aeroporto executando a instrução), <strong>Resolução Presencial</strong> imediata no TECA Viracopos para destravar exigências, e total <strong>Habilitação Oficial</strong> regulamentada.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Minha documentação já está pronta. Como funciona o processo?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Caso sua DI, DSI, DUIMP, DTA ou Termos já estejam instruídos, assumo a operacionalização presencial imediata no Terminal de Cargas de Viracopos para liberação junto à alfândega e entrega ao transportador/destinatário final.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="fade-in">
+        <video class="footer-video-bg" autoplay loop muted playsinline>
+            <source src="aviao-27.mp4" type="video/mp4">
+        </video>
+        <div class="footer-overlay"></div>
+        <div class="footer-content">
+            <div class="footer-cta">
+                <h2>Sua carga está retida ou liberada em Viracopos precisando de trâmite imediato?</h2>
+                <a href="https://wa.me/5519974090051?text=Ol%C3%A1%20Victor,%20minha%20carga%20est%C3%A1%20em%20Viracopos%20e%20preciso%20de%20atendimento." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp Agora
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:mavisatransportes@gmail.com?subject=Contato%20via%20Rodap%C3%A9%20do%20Site" title="Enviar E-mail" class="glow-hover">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/5519974090051" target="_blank" rel="noopener noreferrer" title="WhatsApp" class="glow-hover">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Victor Luis Sanches - Despachante Aduaneiro Autônomo. Atuação no Aeroporto Internacional de Viracopos (VCP).</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante de WhatsApp -->
+    <a href="https://wa.me/5519974090051?text=Ol%C3%A1%20Victor,%20estou%20com%20uma%20carga%20parada%20em%20Viracopos%20e%20preciso%20de%20suporte." class="floating-whatsapp" target="_blank" rel="noopener noreferrer" title="Falar no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Carga parada em Viracopos? Clique aqui.</span>
+    </a>
+
+</body>
+</html>
